@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Aprendizagem</title>
+    <!-- Adicione Bootstrap para estilização (opcional) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Dados da Tabela Aprendizagem</h1>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>CD_DOCUMENTO</th>
+                    <th>CD_AVALIACAO</th>
+                    <th>DC_TECNOLOGIA_PUBLICACAO</th>
+                    <th>FL_EXTRA</th>
+                    <th>NM_PAIS</th>
+                    <th>NM_ESTADO</th>
+                    <th>NM_MUNICIPIO</th>
+                    <th>NM_ESCOLA</th>
+                    <th>NM_ALUNO</th>
+                    <th>NM_DISCIPLINA</th>
+                    <th>TX_ACERTO</th>
+                    <th>VL_PROFICIENCIA</th>
+                    <!-- Adicione mais colunas conforme necessário -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in dados %}
+                <tr>
+                    <td>{{ item.CD_DOCUMENTO }}</td>
+                    <td>{{ item.CD_AVALIACAO }}</td>
+                    <td>{{ item.DC_TECNOLOGIA_PUBLICACAO }}</td>
+                    <td>{{ item.FL_EXTRA }}</td>
+                    <td>{{ item.NM_PAIS }}</td>
+                    <td>{{ item.NM_ESTADO }}</td>
+                    <td>{{ item.NM_MUNICIPIO }}</td>
+                    <td>{{ item.NM_ESCOLA }}</td>
+                    <td>{{ item.NM_ALUNO }}</td>
+                    <td>{{ item.NM_DISCIPLINA }}</td>
+                    <td>{{ item.TX_ACERTO }}</td>
+                    <td>{{ item.VL_PROFICIENCIA }}</td>
+                    <!-- Adicione mais colunas conforme necessário -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Adicione Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
